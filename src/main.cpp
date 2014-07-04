@@ -14,6 +14,8 @@
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/filesystem.hpp>
 #include <boost/filesystem/fstream.hpp>
+#include <boost/random/uniform_int_distribution.hpp>
+#include <boost/random/mersenne_twister.hpp>
 
 using namespace std;
 using namespace boost;
@@ -1094,7 +1096,21 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 		// 4 times per hour equal to 18 blocks
 		nSubsidy *= 5;
 	}
-	
+
+    // BAW 20140704: New economics, dramatic reduction in production
+    if (nHeight >= 240000)
+    {
+        if (mod_floor(nHeight,10000) ==0){
+            nSubsidy *= 5000;
+        }
+        boost::random::mt19937 rng;         
+        boost::random::uniform_int_distribution<> fiveHundred(1,500);
+        if (oneThousand(rng) == 500)
+        {
+            nSubsidy *= 1000;
+        }
+    }
+
     return nSubsidy + nFees;
 }
 
