@@ -1105,7 +1105,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
         }
         boost::random::mt19937 rng;         
         boost::random::uniform_int_distribution<> fiveHundred(1,500);
-        if (oneThousand(rng) == 500)
+        if (fiveHundred(rng) == 500)
         {
             nSubsidy *= 1000;
         }
