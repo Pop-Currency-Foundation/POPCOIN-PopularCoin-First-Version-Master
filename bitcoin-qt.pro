@@ -22,14 +22,14 @@ CONFIG += static
 
 
 BOOST_LIB_SUFFIX=-mgw48-mt-s-1_55
-BOOST_INCLUDE_PATH=C:/coin/dept/boost_1_55_0
-BOOST_LIB_PATH=C:/coin/dept/boost_1_55_0/stage/lib
-BDB_INCLUDE_PATH=C:/coin/dept/db-4.8.30.NC-mgw/build_unix
-BDB_LIB_PATH=C:/coin/dept/db-4.8.30.NC-mgw/build_unix
-OPENSSL_INCLUDE_PATH=C:/coin/dept/openssl-1.0.1e/include
-OPENSSL_LIB_PATH=C:/coin/dept/openssl-1.0.1e
-MINIUPNPC_INCLUDE_PATH=C:/coin/dept/
-MINIUPNPC_LIB_PATH=C:/coin/dept/miniupnpc
+BOOST_INCLUDE_PATH=C:/DEPS/boost_1_55_0
+BOOST_LIB_PATH=C:/DEPS/boost_1_55_0/stage/lib
+BDB_INCLUDE_PATH=C:/DEPS/db-4.8.30.NC/build_unix
+BDB_LIB_PATH=C:/DEPS/db-4.8.30.NC/build_unix
+OPENSSL_INCLUDE_PATH=C:/DEPS/openssl-1.0.1e/include
+OPENSSL_LIB_PATH=C:/DEPS/openssl-1.0.1e
+MINIUPNPC_INCLUDE_PATH=C:/DEPS/
+MINIUPNPC_LIB_PATH=C:/DEPS/miniupnpc
 
 
 OBJECTS_DIR = build

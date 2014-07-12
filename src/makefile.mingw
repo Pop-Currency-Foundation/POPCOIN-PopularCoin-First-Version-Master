@@ -25,21 +25,21 @@ BOOST_SUFFIX?=-mgw48-mt-sd-1_55
 
 INCLUDEPATHS= \
  -I"$(CURDIR)" \
- -I"c:/coin/dept/boost_1_55_0" \
- -I"c:/coin/dept/boost_1_55_0/stage/lib" \
- -I"c:/coin/dept/boost_1_55_0/boost" \
- -I"c:/coin/dept/boost_1_55_0/boost/algorithm" \
- -I"c:/coin/dept/boost_1_55_0/boost/algorithm/string" \
- -I"c:/coin/dept/db-4.8.30.NC-mgw/build_unix" \
- -I"c:/coin/dept/openssl-1.0.1e/include" \
- -I"c:/coin/dept/miniupnpc" \
+ -I"C:/DEPS/boost_1_55_0" \
+ -I"C:/DEPS/boost_1_55_0/stage/lib" \
+ -I"C:/DEPS/boost_1_55_0/boost" \
+ -I"C:/DEPS/boost_1_55_0/boost/algorithm" \
+ -I"C:/DEPS/boost_1_55_0/boost/algorithm/string" \
+ -I"C:/DEPS/db-4.8.30.NC/build_unix" \
+ -I"C:/DEPS/openssl-1.0.1e/include" \
+ -I"C:/DEPS/miniupnpc" \
  -I"$(DEPSDIR)/include"
 
 LIBPATHS= \
  -L"$(CURDIR)/leveldb" \
-  -L"c:/coin/dept/boost_1_55_0/stage/lib" \
- -L"c:/coin/dept/db-4.8.30.NC-mgw/build_unix" \
- -L"c:/coin/dept/openssl-1.0.1e" \
+  -L"C:/DEPS/boost_1_55_0/stage/lib" \
+ -L"C:/DEPS/db-4.8.30.NC/build_unix" \
+ -L"C:/DEPS/openssl-1.0.1e" \
  -L"$(DEPSDIR)/lib"
 LIBS= \
  -l leveldb \
