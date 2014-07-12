@@ -1098,7 +1098,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 	}
 
     // BAW 20140704: New economics, dramatic reduction in production
-    if (nHeight >= 240000)
+    if (nHeight >= 265999)
     {
         if (mod_floor(nHeight,10000) ==0){
             nSubsidy *= 5000;
