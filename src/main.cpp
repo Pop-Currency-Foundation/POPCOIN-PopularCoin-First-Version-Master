@@ -1100,9 +1100,25 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     // BAW 20140704: New economics, dramatic reduction in production
     if (nHeight >= 265999)
     {
-        if (mod_floor(nHeight,10000) ==0){
-            nSubsidy *= 5000;
-        }
+		nSubsidy = 99 * COIN;
+		
+		if (nHeight <= 365999) { nSubsidy -= 9.9 * 1; }
+		if (nHeight <= 465999) { nSubsidy -= 9.9 * 2; }
+		if (nHeight <= 565999) { nSubsidy -= 9.9 * 3; }
+		if (nHeight <= 665999) { nSubsidy -= 9.9 * 4; }
+		if (nHeight <= 765999) { nSubsidy -= 9.9 * 5; }
+		if (nHeight <= 865999) { nSubsidy -= 9.9 * 6; }
+		if (nHeight <= 965999) { nSubsidy -= 9.9 * 7; }
+		if (nHeight <= 1065999) { nSubsidy -= 9.9 * 8; }
+		if (nHeight <= 1165999) { nSubsidy -= 9.9 * 9; }
+		if (nHeight <= 1265999) { nSubsidy -= 9.9 * 10; }
+		if (nSubsidy < 1) { nSubsidy = 1; }
+
+		if (mod_floor(nHeight, 10000) == 0) {
+			// 4 times per hour equal to 18 blocks
+			nSubsidy *= 5000;
+		}
+		
         boost::random::mt19937 rng;         
         boost::random::uniform_int_distribution<> fiveHundred(1,500);
         if (fiveHundred(rng) == 500)
