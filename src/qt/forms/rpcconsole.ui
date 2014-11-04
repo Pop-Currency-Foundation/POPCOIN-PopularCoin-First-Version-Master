@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>POPcoin - Debug window</string>
+   <string>POPCoin - Debug window</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -36,7 +36,7 @@
           </font>
          </property>
          <property name="text">
-          <string>POPcoin Core</string>
+          <string>POPCoin Core</string>
          </property>
         </widget>
        </item>
