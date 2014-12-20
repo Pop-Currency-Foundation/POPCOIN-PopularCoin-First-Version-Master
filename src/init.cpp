@@ -179,7 +179,7 @@ bool AppInit(int argc, char* argv[])
         if (mapArgs.count("-?") || mapArgs.count("--help"))
         {
             // First part of help message is specific to bitcoind / RPC client
-            std::string strUsage = _("POPCoin version") + " " + FormatFullVersion() + "\n\n" +
+            std::string strUsage = _("PopularCoin Version") + " " + FormatFullVersion() + "\n\n" +
                 _("Usage:") + "\n" +
                   "  popcoind [options]                     " + "\n" +
                   "  popcoind [options] <command> [params]  " + _("Send command to -server or popcoind") + "\n" +
@@ -649,7 +649,7 @@ bool AppInit2(boost::thread_group& threadGroup)
     if (GetBoolArg("-shrinkdebugfile", !fDebug))
         ShrinkDebugFile();
     printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
-    printf("POPCoin version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
+    printf("PopularCoin Version %s (%s)\n", FormatFullVersion().c_str(), CLIENT_DATE.c_str());
     printf("Using OpenSSL version %s\n", SSLeay_version(SSLEAY_VERSION));
     if (!fLogTimestamps)
         printf("Startup time: %s\n", DateTimeStrFormat("%Y-%m-%d %H:%M:%S", GetTime()).c_str());
