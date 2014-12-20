@@ -216,8 +216,8 @@ void BitcoinGUI::createActions()
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About POPCoin"), this);
-    aboutAction->setStatusTip(tr("Show information about POPCoin"));
+    aboutAction = new QAction(QIcon(":/icons/bitcoin"), tr("&About PopularCoin"), this);
+    aboutAction->setStatusTip(tr("Show information about PopularCoin"));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutQtAction = new QAction(QIcon(":/trolltech/qmessagebox/images/qtlogo-64.png"), tr("About &Qt"), this);
     aboutQtAction->setStatusTip(tr("Show information about Qt"));
