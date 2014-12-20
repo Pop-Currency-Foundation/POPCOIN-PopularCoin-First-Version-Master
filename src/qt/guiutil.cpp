@@ -495,7 +495,7 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 HelpMessageBox::HelpMessageBox(QWidget *parent) :
     QMessageBox(parent)
 {
-    header = tr("POPCoin-Qt") + " " + tr("version") + " " +
+    header = tr("PopularCoin-Qt") + " " + tr("Version") + " " +
         QString::fromStdString(FormatFullVersion()) + "\n\n" +
         tr("Usage:") + "\n" +
         "  popcoin-qt [" + tr("command-line options") + "]                     " + "\n";
