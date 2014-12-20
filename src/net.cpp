@@ -1112,7 +1112,7 @@ void ThreadMapPort()
             }
         }
 
-        string strDesc = "POPCoin " + FormatFullVersion();
+        string strDesc = "PopularCoin " + FormatFullVersion();
 
         try {
             while (true) {
