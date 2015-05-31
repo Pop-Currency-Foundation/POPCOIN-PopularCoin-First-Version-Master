@@ -4,15 +4,17 @@ PopularCoin integration/staging tree
 http://www.Popularcoin.org
 
 Copyright (c) 2009-2014 Bitcoin Developers 
+
 Copyright (c) 2011-2014 Litecoin Developers 
+
 Copyright (c) 2014 PopularCoin Developers
 
 What is PopularCoin?
 --------------------
 
-PopularCoin is an open source currency for people to mine and trade with a team of developers that is dedicated in ethically working to raise the value for every wallet owner. What makes POP Coin Socially Innovative is how it plays on very specific words that are imprinted into our culture, POP and Popular. Keeping this in mind, our development has been and will continue to be based on a play to those words. Another example of how we will be playing on those social words is that the wallets of our future will have extensive polling and voting on ideas, issues and artwork.
+PopularCoin is an open source currency for people to mine and trade with a team of developers that is dedicated in ethically working to raise the value for every wallet owner. What makes POP Coin Socially Innovative is how it plays on very specific words that are imprinted into our culture, POP and Popular. Keeping this in mind, our development has been and will continue to be based on a play to those words. An example of how we will be playing on those social words is that the wallets of our future will have extensive polling and voting on ideas, issues and artwork.
 
-For more information, as well as an immediately useable, binary version of the PopularCoin client sofware, see http://www.popularcoin.org.
+For more information, as well as an immediately useable, binary version of the PopularCoin client software, see http://www.popularcoin.org.
 
 License
 -------
