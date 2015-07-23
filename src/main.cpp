@@ -1108,23 +1108,43 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 		if (nHeight <= 665999) { nSubsidy -= 9.9 * 4; }
 		if (nHeight <= 765999) { nSubsidy -= 9.9 * 5; }
 		if (nHeight <= 865999) { nSubsidy -= 9.9 * 6; }
-		if (nHeight <= 965999) { nSubsidy -= 9.9 * 7; }
-		if (nHeight <= 1065999) { nSubsidy -= 9.9 * 8; }
-		if (nHeight <= 1165999) { nSubsidy -= 9.9 * 9; }
-		if (nHeight <= 1265999) { nSubsidy -= 9.9 * 10; }
-		if (nSubsidy < 1) { nSubsidy = 1; }
 
 		if (mod_floor(nHeight, 10000) == 0) {
 			// 4 times per hour equal to 18 blocks
 			nSubsidy *= 5000;
 		}
-		
-        boost::random::mt19937 rng;         
-        boost::random::uniform_int_distribution<> fiveHundred(1,500);
-        if (fiveHundred(rng) == 500)
-        {
-            nSubsidy *= 1000;
-        }
+    // -^.^- 20150722: New economics, Re-ignighting the POP Mining / fixing Bryce Weiners Shitty Coding ^^
+    if (nHeight >= 899999)
+    {
+    	nSubsidy = 99 * COIN;
+
+	if (mod_floor(nHeight, 10000) == 0)
+	{
+		nSubsidy *= 5000;
+		// Every 10000 blocks
+	} else if (mod_floor(nHeight, 101647) == 0) {
+		// Every 2 month or 6 times a year
+		nSubsidy *= 10000;
+	} else if (mod_floor(nHeight, 50823) == 0) {
+		// Every month
+		nSubsidy *= 500;
+	} else if (mod_floor(nHeight, 11858) == 0) {
+		// Every Week
+		nSubsidy *= 100;
+	} else if (mod_floor(nHeight, 1694) == 0) {
+		// Every day
+		nSubsidy *= 50;
+	} else if (mod_floor(nHeight, 141) == 0) {
+		// Every 2 hours or 12 times a day
+		nSubsidy *= 25;
+	} else if (mod_floor(nHeight, 70) == 0) {
+		// Every hour
+		nSubsidy *= 10;
+	} else if (mod_floor(nHeight, 18) == 0) {
+		// 4 times per hour equal to 18 blocks
+		nSubsidy *= 5;
+	}
+
     }
 
     return nSubsidy + nFees;
