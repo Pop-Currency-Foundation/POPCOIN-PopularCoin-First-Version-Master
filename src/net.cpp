@@ -1192,22 +1192,21 @@ void MapPort(bool)
 // The first name is used as information source for addrman.
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
+		{"masternode", "162.248.167.140"},
+	{"masternode1", "104.233.76.249"},
     {"seed", "24.143.42.79"},
 	{"seed1", "162.255.117.106"},
 	{"seed2", "168.61.80.253"},
-	{"seed3", "84.195.25.156"},
-	{"seed4", "54.77.202.104"},
-	{"seed5", "162.243.222.64"},
-	{"seed6", "68.109.20.227"},
-	{"seed7", "162.255.117.105"},
+	{"seed3", "84.195.168.66"},
 	{"seed8", "84.2.34.93"},
-	{"seed9", "192.99.111.227"},
-	{"seed10", "198.50.151.86"},
-	{"seed11", "5.196.226.54"},
-	{"seed12", "5.196.29.188"},
-	{"1altcoincenter.com", "seeds.altcoin.center"},
-	{"2altcoincenter.com", "seeds.altcoin.center.eu"},
-	{"3altcoincenter.com", "seeds.altcoin.center.us"},
+	{"seed4", "54.77.202.104"},
+	{"seed5", "62.221.89.173"},
+	{"seed6", "68.9.193.168"},
+	{"seed7", "162.255.117.105"},
+	{"seed9", "184.173.170.30"},
+	{"seed10", "104.219.250.54"},
+	{"seed11", "98.172.122.112"},
+	{"seed12", "213.87.135.78"},
 	
     {NULL, NULL}
 };
