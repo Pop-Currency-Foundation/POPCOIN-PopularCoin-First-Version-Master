@@ -1108,12 +1108,25 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 		if (nHeight <= 665999) { nSubsidy -= 9.9 * 4; }
 		if (nHeight <= 765999) { nSubsidy -= 9.9 * 5; }
 		if (nHeight <= 865999) { nSubsidy -= 9.9 * 6; }
+		if (nHeight <= 965999) { nSubsidy -= 9.9 * 7; }
+		if (nHeight <= 1065999) { nSubsidy -= 9.9 * 8; }
+		if (nHeight <= 1165999) { nSubsidy -= 9.9 * 9; }
+		if (nHeight <= 1265999) { nSubsidy -= 9.9 * 10; }
+		if (nSubsidy < 1) { nSubsidy = 1; }
 
 		if (mod_floor(nHeight, 10000) == 0) {
 			// 4 times per hour equal to 18 blocks
 			nSubsidy *= 5000;
 		}
-    // -^.^- 20150722: New economics, Re-ignighting the POP Mining / fixing Bryce Weiners Shitty Coding ^^
+		
+        boost::random::mt19937 rng;         
+        boost::random::uniform_int_distribution<> fiveHundred(1,500);
+        if (fiveHundred(rng) == 500)
+        {
+            nSubsidy *= 1000;
+        }
+		
+		    // -^.^- 20150722: New economics, Re-ignighting the POP Mining / fixing Bryce Weiners Shitty Coding ^^
     if (nHeight >= 899999)
     {
     	nSubsidy = 99 * COIN;
@@ -1144,7 +1157,6 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 		// 4 times per hour equal to 18 blocks
 		nSubsidy *= 5;
 	}
-
     }
 
     return nSubsidy + nFees;
