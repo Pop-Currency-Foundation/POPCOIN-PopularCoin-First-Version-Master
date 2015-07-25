@@ -1096,41 +1096,9 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 		// 4 times per hour equal to 18 blocks
 		nSubsidy *= 5;
 	}
-	
-	// -^.^- 20150722: New economics, Re-ignighting the POP Mining / fixing Bryce Weiners Shitty Coding ^^
-    if (nHeight >= 889999)
-    {
-    	nSubsidy = 99 * COIN;
-
-	if (mod_floor(nHeight, 10000) == 0)
-	{
-		nSubsidy *= 5000;
-		// Every 10000 blocks
-	} else if (mod_floor(nHeight, 101647) == 0) {
-		// Every 2 month or 6 times a year
-		nSubsidy *= 10000;
-	} else if (mod_floor(nHeight, 50823) == 0) {
-		// Every month
-		nSubsidy *= 500;
-	} else if (mod_floor(nHeight, 11858) == 0) {
-		// Every Week
-		nSubsidy *= 100;
-	} else if (mod_floor(nHeight, 1694) == 0) {
-		// Every day
-		nSubsidy *= 50;
-	} else if (mod_floor(nHeight, 141) == 0) {
-		// Every 2 hours or 12 times a day
-		nSubsidy *= 25;
-	} else if (mod_floor(nHeight, 70) == 0) {
-		// Every hour
-		nSubsidy *= 10;
-	} else if (mod_floor(nHeight, 18) == 0) {
-		// 4 times per hour equal to 18 blocks
-		nSubsidy *= 5;
-	}
 
     // BAW 20140704: New economics, dramatic reduction in production
-    else if (nHeight >= 265999)
+    if (nHeight >= 265999)
     {
 		nSubsidy = 99 * COIN;
 		
@@ -1158,6 +1126,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
             nSubsidy *= 1000;
         }
     }
+
     return nSubsidy + nFees;
 }
 
