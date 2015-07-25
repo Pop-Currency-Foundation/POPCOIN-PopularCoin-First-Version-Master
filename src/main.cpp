@@ -1098,7 +1098,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 	}
 	
 // -^.^- 20150725: New economics, Re-ignighting the POP Mining Fixing Bryce Weiners Shitty Coding
-    if (nHeight >= 889999)
+    if (nHeight >= 884999)
     {
 		nSubsidy = 99 * COIN;
 		
@@ -1130,7 +1130,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
     }
 	
     // BAW 20140704: New economics, dramatic reduction in production
-    if (nHeight >= 265999)
+    if (nHeight >= 265999 && nHeight < 884999)
     {
 		nSubsidy = 99 * COIN;
 		
