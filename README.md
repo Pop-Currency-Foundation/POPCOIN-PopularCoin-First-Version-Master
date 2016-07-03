@@ -1,11 +1,11 @@
 PopularCoin integration/staging tree
 ================================
 
-http://www.Popularcoin.org
+http://popularcoin.org
 
-Copyright (c) 2009-2014 Bitcoin Developers 
+Copyright (c) 2009 Bitcoin Developers 
 
-Copyright (c) 2011-2014 Litecoin Developers 
+Copyright (c) 2011 Litecoin Developers 
 
 Copyright (c) 2014 PopularCoin Developers
 
