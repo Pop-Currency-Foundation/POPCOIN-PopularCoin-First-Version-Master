@@ -27,7 +27,7 @@
 using namespace std;
 using namespace boost;
 
-static const int MAX_OUTBOUND_CONNECTIONS = 8;
+static const int MAX_OUTBOUND_CONNECTIONS = 21;
 
 bool OpenNetworkConnection(const CAddress& addrConnect, CSemaphoreGrant *grantOutbound = NULL, const char *strDest = NULL, bool fOneShot = false);
 
@@ -1193,20 +1193,25 @@ void MapPort(bool)
 // The second name should resolve to a list of seed addresses.
 static const char *strMainNetDNSSeed[][2] = {
 		{"masternode", "162.248.167.140"},
-	{"masternode1", "104.233.76.249"},
-    {"seed", "24.143.42.79"},
-	{"seed1", "162.255.117.106"},
-	{"seed2", "168.61.80.253"},
-	{"seed3", "84.195.168.66"},
-	{"seed8", "84.2.34.93"},
-	{"seed4", "54.77.202.104"},
-	{"seed5", "62.221.89.173"},
-	{"seed6", "68.9.193.168"},
-	{"seed7", "162.255.117.105"},
-	{"seed9", "184.173.170.30"},
-	{"seed10", "104.219.250.54"},
-	{"seed11", "98.172.122.112"},
-	{"seed12", "213.87.135.78"},
+	{"masternode1", "45.62.242.82"},
+    {"seed", "45.62.244.145"},
+	{"seed1", "179.181.68.112"},
+	{"seed2", "128.71.228.218"},
+	{"seed3", "190.101.73.153"},
+	{"seed8", "107.185.176.131"},
+	{"seed4", "73.84.22.122"},
+	{"seed5", "84.2.34.93"},
+	{"seed6", "73.84.22.122"},
+	{"seed7", "24.11.45.99"},
+	{"seed9", "31.28.12.26"},
+	{"seed10", "98.115.147.74"},
+	{"seed11", "68.185.180.227"},
+	{"seed12", "72.71.254.179"},
+		{"seed13", "158.69.27.82"},
+			{"seed14", "217.175.119.125"},
+				{"seed15", "51.254.196.222"},
+					{"seed16", "72.221.89.151"},
+						{"seed17", "184.164.129.202"},
 	
     {NULL, NULL}
 };
