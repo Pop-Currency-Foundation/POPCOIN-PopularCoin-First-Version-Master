@@ -1098,7 +1098,7 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 	}
 	
 // -^.^- 20150725: New economics, Re-ignighting the POP Mining Fixing Bryce Weiners Shitty Coding
-    if (nHeight >= 884999)
+    if (nHeight >= 884999 && nHeight < 2429860)
     {
 		nSubsidy = 99 * COIN;
 		
@@ -1128,6 +1128,14 @@ int64 static GetBlockValue(int nHeight, int64 nFees)
 			nSubsidy *= 5;
 		}
     }
+	
+	
+// 20180501: Reward Mod V2 End POW Production
+    if (nHeight >= 2429860)
+    {
+		nSubsidy = 0 * COIN;
+    }
+
 	
     // BAW 20140704: New economics, dramatic reduction in production
     if (nHeight >= 265999 && nHeight < 884999)
@@ -1336,13 +1344,17 @@ unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
         int DiffMode = 1;
+	unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
         if (fTestNet) {
                 if (pindexLast->nHeight+1 >= 50) { DiffMode = 2; }
         }
         else {
                 if (pindexLast->nHeight+1 >= 400000) { DiffMode = 2; }
         }
-        
+	// static minumal difficulty
+	if (pindexLast->nHeight+1 >= 2429860) {
+		return nProofOfWorkLimit;
+	}
         if                (DiffMode == 1) { return GetNextWorkRequired_V1(pindexLast, pblock); }
         else if        (DiffMode == 2) { return GetNextWorkRequired_V2(pindexLast, pblock); }
         return GetNextWorkRequired_V2(pindexLast, pblock);

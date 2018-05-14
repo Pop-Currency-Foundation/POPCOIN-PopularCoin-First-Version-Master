@@ -1,0 +1,4 @@
+[Project]
+CreatedFrom=popcoin-qt.pro
+Manager=KDevQMakeManager
+Name=first-chain

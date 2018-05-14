@@ -15,8 +15,8 @@
 #include <QDebug>
 #include <QFileOpenEvent>
 #include <QHash>
-#include <QLocalServer>
-#include <QLocalSocket>
+#include </usr/include/x86_64-linux-gnu/qt5/QtNetwork/qlocalserver.h>
+#include </usr/include/x86_64-linux-gnu/qt5/QtNetwork/qlocalsocket.h>
 #include <QStringList>
 #if QT_VERSION < 0x050000
 #include <QUrl>
