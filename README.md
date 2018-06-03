@@ -12,7 +12,7 @@ Copyright (c) 2014 PopularCoin Developers
 
 Final Version 8.1 First PopularCoin Chain based off Litecoin and Bitcoin
 
-This First Chain will be refered to from this point on as PopularCoin First Chain and trade with Ticker (QPOP) - To represent the prefix of the first blockchains wallet addresses Q the V2 Chain address prefix is P so that users will not get confused.
+This First Chain will be refered to from this point on as PopularCoin Classic and trade with Ticker (POPC).
 
 The end of POW mining rewards for PopularCoin First Chain at block 2429860 where the mining adjustment has been made to combat instamine and block throttleing and ensure the chain is maintained without producing new coins. The Chain will continue to function with 0 reward and is promised to be maintained for up to 10 years as needed by the PopularCoin Dev team at Meanxtrade.com
 
