@@ -14,9 +14,9 @@ Final Version 8.1 First PopularCoin Chain based off Litecoin and Bitcoin
 
 This First Chain will be refered to from this point on as PopularCoin Classic and trade with Ticker (POPC).
 
-The end of POW mining rewards for PopularCoin First Chain at block 2429860 where the mining adjustment has been made to combat instamine and block throttleing and ensure the chain is maintained without producing new coins. The Chain will continue to function with 0 reward and is promised to be maintained for up to 10 years as needed by the PopularCoin Dev team at Meanxtrade.com
+The end of POW mining rewards for PopularCoin First Chain at block 2429860 where the mining adjustment has been made to ensure the chain is maintained without producing new coins. The Chain will continue to function with 0 reward and is promised to be maintained for 2 years for Swap by the PopularCoin Dev team at Meanxtrade.com https://www.meanxtrade.com/swap
 
-You will be able to find this first chains final repo available at https://github.com/Pop-Currency-Foundation/First-Chain indefinitely and at https://github.com/Pop-Currency-Foundation/PopularCoin/releases/ 
+You will be able to find this first chains final repo available at https://github.com/Pop-Currency-Foundation/POPCOIN-PopularCoin-First-Version-Master indefinitely and at https://github.com/Pop-Currency-Foundation/POPCOIN-PopularCoin-First-Version-Master/releases/ 
 
 PopularCoin V2.0 Is a Hybrid Scrypt Chain with Slower Block Speed to allow for easier sync and more transactions and a new blockchain licensing function along with POS rewards. 
 
