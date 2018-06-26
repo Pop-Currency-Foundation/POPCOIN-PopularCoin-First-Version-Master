@@ -1344,7 +1344,7 @@ unsigned int static GetNextWorkRequired_V2(const CBlockIndex* pindexLast, const 
 unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHeader *pblock)
 {
         int DiffMode = 1;
-//	unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
+	unsigned int nProofOfWorkLimit = bnProofOfWorkLimit.GetCompact();
         if (fTestNet) {
                 if (pindexLast->nHeight+1 >= 50) { DiffMode = 2; }
         }
@@ -1352,9 +1352,9 @@ unsigned int static GetNextWorkRequired(const CBlockIndex* pindexLast, const CBl
                 if (pindexLast->nHeight+1 >= 400000) { DiffMode = 2; }
         }
 	// static minumal difficulty
-//	if (pindexLast->nHeight+1 >= 2429860) {
-//		return nProofOfWorkLimit;
-//	}
+	if (pindexLast->nHeight+1 >= 2429860) {
+		return nProofOfWorkLimit;
+	}
         if                (DiffMode == 1) { return GetNextWorkRequired_V1(pindexLast, pblock); }
         else if        (DiffMode == 2) { return GetNextWorkRequired_V2(pindexLast, pblock); }
         return GetNextWorkRequired_V2(pindexLast, pblock);
